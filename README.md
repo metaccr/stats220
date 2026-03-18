@@ -34,6 +34,6 @@ A meme that captures how I currently feel about my university studies is ![](htt
 <br />
 <a href="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWtjMTVmYWNybjVkNDYyejl4cHh4YWIwa3F4d2Fyc3h6bTB5emdzMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bEs40jYsdQjmM/giphy.gif">How uni feels after work</a>
 <br />
-<img src="https://media.giphy.com/media/7zMvSDWl3RkDSpOjBC/giphy.gif" alt="How it feels after uni work is done">
+![How it feels after uni work is done](https://media.giphy.com/media/7zMvSDWl3RkDSpOjBC/giphy.gif)
 
 

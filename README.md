@@ -9,3 +9,6 @@ A little about me:
 - I am interested in learning about cool stuff that we will be learning about.
 
 A meme that captures how I currently feel about my university studies is ![](https://giphy.com/gifs/cats-memes-funny-cat-pY8jLmZw0ElqvVeRH4)
+
+<h1>WOAH... this is pretty groovy.</h1>
+<h2>And I believe this the header 2.0.... very cool very swag indeed.</h2>

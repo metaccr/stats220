@@ -32,7 +32,7 @@ A meme that captures how I currently feel about my university studies is ![](htt
 <br />
 *Hint: A whole bunch of variables play into this! Physical appearance tends to be a major one:*
 <br />
-<a href="[https://github.com](https://www.bing.com/images/search?q=ariel&form=HDRSC3&first=1))">GitHub</a>
+<a href="https://github.com">GitHub</a>
 
 
 

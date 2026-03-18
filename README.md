@@ -34,6 +34,6 @@ A meme that captures how I currently feel about my university studies is ![](htt
 <br />
 <a href="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWtjMTVmYWNybjVkNDYyejl4cHh4YWIwa3F4d2Fyc3h6bTB5emdzMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bEs40jYsdQjmM/giphy.gif">How uni feels after work</a>
 <br />
-<iframe src="https://giphy.com/embed/7zMvSDWl3RkDSpOjBC" width="480" height="355" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/7zMvSDWl3RkDSpOjBC">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/7zMvSDWl3RkDSpOjBC" width="480" height="355" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 

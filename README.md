@@ -27,3 +27,6 @@ A meme that captures how I currently feel about my university studies is ![](htt
   <li>a little bit of growing 'rare' plants (because we are too broke for $10k pokemon cards)</li>
   <li> a little bit of 'fine dining' cooking with recipes by ChatGPT. It's failed every single time.</li>
 </ul>
+
+**Question: If you are playing duck duck goose, what is the socially acceptable amount of times you can say duck before the group kicks you out?** 
+*Hint: A whole bunch of variables play into this!*

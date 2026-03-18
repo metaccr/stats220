@@ -10,5 +10,20 @@ A little about me:
 
 A meme that captures how I currently feel about my university studies is ![](https://giphy.com/gifs/cats-memes-funny-cat-pY8jLmZw0ElqvVeRH4)
 
-<h1>WOAH... this is pretty groovy.</h1>
-<h2>And I believe this the header 2.0.... very cool very swag indeed.</h2>
+
+<h1>Project 1: Now then... let's begin this assignment.  </h1>
+
+
+<h2>I feel like you could spend way too much time having fun with formatting....\</h2>
+<ol>
+  <li>you could make fancy lists</li>
+  <li>which looks pretty cool</li>
+  <li>but I got other things to do so...</li>
+</ol>
+
+<h2>Other things include in no specific order:\</h2>
+<ul>
+  <li>a little bit of work..</li>
+  <li>a little bit of growing 'rare' plants (because we are too broke for $10k pokemon cards)</li>
+  <li> a little bit of 'fine dining' cooking with recipes by ChatGPT. It's failed every single time.</li>
+</ul>

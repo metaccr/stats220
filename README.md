@@ -33,7 +33,8 @@ A meme that captures how I currently feel about my university studies is ![](htt
 *Hint: A whole bunch of variables play into this! Physical appearance tends to be a major one:*
 <br />
 <a href="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWtjMTVmYWNybjVkNDYyejl4cHh4YWIwa3F4d2Fyc3h6bTB5emdzMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bEs40jYsdQjmM/giphy.gif">How uni feels after work</a>
-<img src="https://giphy.com/gifs/7zMvSDWl3RkDSpOjBC" alt="How it feels after uni work is done" />
+<br />
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExazJwbm1pcWtiZ2VtMnByNWo5aWpxcmZ0NHhqYzQ2bjg2OWoyZmQwdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7zMvSDWl3RkDSpOjBC/giphy.gif" alt="How it feels after uni work is done" />
 
 
 

@@ -30,6 +30,8 @@ A meme that captures how I currently feel about my university studies is ![](htt
  
 **Question: If you are playing duck duck goose, what is the socially acceptable amount of times you can say duck before the group kicks you out?** 
 <br />
-*Hint: A whole bunch of variables play into this! Physical appearance tends to be a major one: <a href="[...](https://www.bing.com/images/search?q=ariel&form=HDRSC3&first=1)">...</a>*
+*Hint: A whole bunch of variables play into this! Physical appearance tends to be a major one:*
+<br />
+*<a href="[...](https://www.bing.com/images/search?q=ariel&form=HDRSC3&first=1)">...</a>*
 
 

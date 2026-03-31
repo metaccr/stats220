@@ -1,0 +1,121 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE,
+                      fig.width=9, fig.height=5)
+```
+```{css}
+body {
+  font-family: Georgia, serif;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #2c2c2c;
+}
+
+h2 {
+  color: #3a5a8c;
+  border-bottom: 2px solid #3a5a8c;
+  padding-bottom: 6px;
+}
+
+p {
+  line-height: 1.7;
+}
+
+img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+```
+
+## Daily Habits: Social Media & Exercise Tracking
+
+This report tracks daily social media usage and exercise habits logged over a two-week period of yours truly. Each entry represents one day, recorded using a personal Google Form.
+```{r}
+library(tidyverse)
+
+# Import and rename data
+latest_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRiBnG1C-HUsC6CXd1aWNAyxiyDFmwIY_faT_I7A8rZlD3BcoXQe9xTAgDVUt656TRLVCnXO_IBB0th/pub?gid=1037567688&single=true&output=csv") %>%
+  rename(
+    timestamp        = 1,
+    date             = 2,
+    social_media_hrs = 3,
+    exercise_type    = 4,
+    exercise_mins    = 5
+  ) %>%
+  mutate(exercised = ifelse(exercise_type %in% c("Gym", "Fencing", "Walk and Talk with other fellow humans"),
+                            "Exercised",
+                            "Did Not Exercise"))
+
+# Summary values
+mean_social_media <- mean(latest_data$social_media_hrs, na.rm = TRUE) %>%
+  round(1)
+
+mean_exercise <- latest_data %>%
+  filter(exercise_mins > 0) %>%
+  pull(exercise_mins) %>%
+  mean(na.rm = TRUE) %>%
+  round(1)
+
+total_obs <- length(latest_data$social_media_hrs)
+
+most_common_exercise <- latest_data %>%
+  count(exercise_type) %>%
+  slice_max(n, n = 1) %>%
+  pull(exercise_type)
+```
+
+Over the `r total_obs` days logged, the average time spent on social media was `r mean_social_media` hours per day. On active days, the average exercise duration was `r mean_exercise` minutes. The most frequently logged activity was **`r most_common_exercise`**.
+```{r}
+# Bar chart 1 - frequency of exercise types (sorted highest to lowest)
+latest_data %>%
+  ggplot() +
+  geom_bar(aes(y = fct_rev(fct_infreq(exercise_type)), fill = exercise_type)) +
+  labs(
+    title = "Frequency of Exercise Types Logged",
+    x = "Number of Days",
+    y = "Exercise Type",
+    caption = "Source: Daily Habit Log"
+  ) +
+  theme(legend.position = "none")
+```
+```{r}
+# Bar chart 2 - average social media hours per exercise type (sorted)
+latest_data %>%
+  group_by(exercise_type) %>%
+  summarise(avg_social_media = mean(social_media_hrs, na.rm = TRUE)) %>%
+  ggplot() +
+  geom_bar(aes(y = fct_reorder(exercise_type, avg_social_media),
+               x = avg_social_media,
+               fill = exercise_type),
+           stat = "identity") +
+  labs(
+    title = "Average Social Media Hours by Exercise Type",
+    x = "Average Hours",
+    y = "Exercise Type",
+    caption = "Source: Daily Habit Log"
+  ) +
+  theme(legend.position = "none")
+```
+```{r}
+# Bar chart 3 - average social media hours: exercised vs did not exercise
+latest_data %>%
+  group_by(exercised) %>%
+  summarise(avg_social_media = mean(social_media_hrs, na.rm = TRUE)) %>%
+  ggplot() +
+  geom_bar(aes(y = fct_reorder(exercised, avg_social_media),
+               x = avg_social_media,
+               fill = exercised),
+           stat = "identity") +
+  labs(
+    title = "Average Social Media Hours: Exercised vs Did Not Exercise",
+    x = "Average Hours",
+    y = "",
+    caption = "Source: Daily Habit Log"
+  ) +
+  theme(legend.position = "none")
+```

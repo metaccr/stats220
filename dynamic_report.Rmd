@@ -56,10 +56,22 @@ mean_social_media <- mean(latest_data$social_media_hrs, na.rm = TRUE) %>%
   round(1)
 
 mean_exercise <- latest_data %>%
-  filter(exercise_mins > 0) %>%
+  filter(exercised == 'Exercised') %>%
   pull(exercise_mins) %>%
   mean(na.rm = TRUE) %>%
-  round(1)
+  round(2)
+
+mean_social_media_rest <- latest_data %>%
+  filter(exercised == "Did Not Exercise") %>%
+  pull(social_media_hrs) %>%
+  mean(na.rm = TRUE) %>%
+  round(2)
+
+mean_social_media_exercised <- latest_data %>%
+  filter(exercised == 'Exercised') %>%
+  pull(social_media_hrs) %>%
+  mean(na.rm = TRUE) %>%
+  round(2)
 
 total_obs <- length(latest_data$social_media_hrs)
 
@@ -69,7 +81,7 @@ most_common_exercise <- latest_data %>%
   pull(exercise_type)
 ```
 
-Over the `r total_obs` days logged, the average time spent on social media was `r mean_social_media` hours per day. On active days, the average exercise duration was `r mean_exercise` minutes. The most frequently logged activity was **`r most_common_exercise`**.
+Over the `r total_obs` days logged, the average time spent on social media was `r mean_social_media` hours per day. On active days, the average exercise duration was `r mean_exercise` minutes, with an average of `r mean_social_media_exercised` hours spent on social media. On rest days, the average social media usage was `r mean_social_media_rest` hours. The most frequently logged activity was **`r most_common_exercise`**.
 ```{r}
 # Bar chart 1 - frequency of exercise types (sorted highest to lowest)
 latest_data %>%

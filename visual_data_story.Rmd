@@ -1,0 +1,74 @@
+---
+title: Is Brainrot also Bodyrot?
+output: html_document
+---
+
+```{=html}
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+```
+
+```{js}
+$(function() {
+  $(".level2").css('visibility', 'hidden');
+  $(".level2").first().css('visibility', 'visible');
+  $(".container-fluid").height($(".container-fluid").height() + 300);
+  $(window).on('scroll', function() {
+    $('h2').each(function() {
+      var h2Top = $(this).offset().top - $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (h2Top >= 0 && h2Top <= windowHeight / 2) {
+        $(this).parent('div').css('visibility', 'visible');
+      } else if (h2Top > windowHeight / 2) {
+        $(this).parent('div').css('visibility', 'hidden');
+      }
+    });
+  });
+})
+```
+
+```{css, echo=FALSE}
+body {
+  background-color: #efedf5;
+  font-family: Georgia, serif;
+  color: #2d2d2d;
+}
+
+h2 {
+  color: #756bb1;
+  border-bottom: 2px solid #bcbddc;
+  padding-bottom: 8px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7;
+}
+
+.figcaption {display: none}
+```
+
+## About This Data Story
+
+Every day for several weeks, I logged three things: how many hours I spent on social media, what type of exercise I did, and how long I exercised for. This story explores what that data reveals about my daily habits.
+
+## Which Exercise Takes the Longest?
+
+![Bar chart showing average exercise duration by activity type. Fencing and Walk and Talk have the highest averages, while Rest days show zero minutes.](plot1.png)
+
+Some activities naturally demand more time than others. This chart shows the average minutes spent on each type of exercise across all logged days.
+
+## Does Screen Time Affect Exercise?
+
+![Scatter plot showing social media hours on the x-axis and exercise minutes on the y-axis, coloured by exercise type, with a trend line.](plot2.png)
+
+Is there a trade-off between time on social media and time being active? Each point represents one day of logging.
+
+## How Did Habits Change Over Time?
+
+![Line chart showing average weekly exercise minutes over time, with points marked at each week.](plot3.png)
+
+Looking across the weeks, this chart reveals how consistent — or inconsistent — exercise habits were over the logging period.
